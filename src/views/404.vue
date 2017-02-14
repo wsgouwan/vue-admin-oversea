@@ -3,10 +3,10 @@
         这个页面丢失了～
     </div>
 </template>
-<style rel="stylesheet/scss" lang="scss">
+<style>
 
 </style>
-<script type="text/ecmascript-6">
+<script>
     export default{
         data(){
             return{

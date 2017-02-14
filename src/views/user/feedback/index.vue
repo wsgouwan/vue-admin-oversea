@@ -66,7 +66,7 @@
         </el-table>
     </el-row>
 </template>
-<style rel="stylesheet/scss" lang="scss">
+<style>
     .wrap{
         padding: 12px;
     }
@@ -80,7 +80,7 @@
         max-width: 100px;
     }
 </style>
-<script type="text/ecmascript-6">
+<script>
     import {feedback} from '../../../assets/scripts/api/index';
     import utils from '../../../assets/scripts/utils/index';
 

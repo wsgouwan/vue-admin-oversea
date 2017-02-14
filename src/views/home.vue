@@ -7,7 +7,7 @@
             </el-col>
             <el-col :span="4" class="rightbar">
                 <el-dropdown trigger="click">
-					<span class="el-dropdown-link" style="color:#c0ccda;cursor: pointer;">
+                    <span class="el-dropdown-link" style="color:#c0ccda;cursor: pointer;">
                         <img :src="this.sysUserAvatar" class="head"> {{sysUserName}}
                     </span>
                     <el-dropdown-menu slot="dropdown">
@@ -21,9 +21,8 @@
 
         <el-col :span="24" class="panel-center">
             <aside style="width:230px;">
-                <el-menu :default-active="$route.path" class="el-menu-vertical-demo" @open="handleopen"
-                         @close="handleclose" @select="handleselect"
-                         theme="dark" unique-opened router>
+                <el-menu :default-active="$route.path" class="el-menu-vertical-demo" @open="handleopen" @close="handleclose" @select="handleselect"
+                    theme="dark" unique-opened router>
                     <template v-for="(item,index) in $router.options.routes" v-if="!item.hidden">
                         <el-submenu :index="index+''" v-if="!item.leaf">
                             <template slot="title"><i :class="item.iconCls"></i>{{item.meta.desc}}</template>
@@ -31,11 +30,10 @@
                                 {{child.meta.desc}}
                             </el-menu-item>
                         </el-submenu>
-                        <el-menu-item v-if="item.leaf&&item.children.length>0" :index="item.children[0].path"><i
-                            :class="item.iconCls"></i>{{item.children[0].desc}}
+                        <el-menu-item v-if="item.leaf&&item.children.length>0" :index="item.children[0].path"><i :class="item.iconCls"></i>{{item.children[0].desc}}
                         </el-menu-item>
                     </template>
-                </el-menu>
+                    </el-menu>
             </aside>
             <section class="panel-c-c">
                 <div class="grid-content bg-purple-light">
@@ -58,9 +56,9 @@
     </el-row>
 </template>
 
-<script type="text/ecmascript-6">
-    export default{
-        data(){
+<script>
+    export default {
+        data() {
             return {
                 sysUserName: '',
                 sysUserAvatar: '',
@@ -78,11 +76,11 @@
         },
 
         methods: {
-            handleopen() {},
-            handleclose() {},
-            handleselect() {}
+            handleopen() { },
+            handleclose() { },
+            handleselect() { }
         },
-        mounted(){
+        mounted() {
             console.log(this.$router.options);
             var user = sessionStorage.getItem('user');
 
@@ -95,26 +93,27 @@
         },
         components: {}
     }
+
 </script>
 
-<style rel="stylesheet/scss" lang="scss" scoped>
+<style scoped>
     .fade-enter-active,
     .fade-leave-active {
         transition: opacity .5s
     }
-
+    
     .fade-enter,
     .fade-leave-active {
         opacity: 0
     }
-
+    
     .panel {
         position: absolute;
         top: 0px;
         bottom: 0px;
         width: 100%;
     }
-
+    
     .panel-top {
         height: 60px;
         line-height: 60px;
@@ -132,7 +131,7 @@
             }
         }
     }
-
+    
     .panel-center {
         background: #324057;
         position: absolute;
@@ -140,7 +139,7 @@
         bottom: 0px;
         overflow: hidden;
     }
-
+    
     .panel-c-c {
         background: #f1f2f7;
         position: absolute;
@@ -151,30 +150,30 @@
         overflow-y: scroll;
         padding: 20px;
     }
-
+    
     .logout {
         background-size: contain;
         width: 20px;
         height: 20px;
         float: left;
     }
-
+    
     .logo {
         width: 40px;
         float: left;
         margin: 10px 10px 10px 18px;
     }
-
+    
     .tip-logout {
         float: right;
         margin-right: 20px;
         padding-top: 5px;
     }
-
+    
     .tip-logout i {
         cursor: pointer;
     }
-
+    
     .admin {
         color: #c0ccda;
         text-align: center;
