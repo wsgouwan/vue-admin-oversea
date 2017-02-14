@@ -37,9 +37,15 @@
     "function-bind": "^1.1.0",
     "html-webpack-plugin": "^2.28.0",
     "http-proxy-middleware": "^0.17.3",
+<<<<<<< HEAD
     "opn": "^4.0.2",
     "ora": "^1.1.0",
     "sass-loader": "^5.0.1",
+=======
+    "node-sass": "^4.5.0",
+    "opn": "^4.0.2",
+    "ora": "^1.1.0",
+>>>>>>> fe80b32eee39165beef17bc92d206f4c2fa7064a
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
     "url-loader": "^0.5.7",
